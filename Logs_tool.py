@@ -1,4 +1,3 @@
-from email.mime import message
 import subprocess
 import json
 import time
@@ -6,9 +5,9 @@ from colorama import Fore, Style, init
 import smtplib
 from email.mime.text import MIMEText
 
-EMAIL_SENDER = "rikenpatidar17@gmail.com"
-EMAIL_PASSWORD = "ldhp txew mbpo ouht"
-EMAIL_RECEIVER = "rikenpatidar17@gmail.com"
+EMAIL_SENDER = "your_email@gmail.com"
+EMAIL_PASSWORD = "YOUR_APP_PASSWORD"
+EMAIL_RECEIVER = "receiver_email@gmail.com"
 
 WHITELIST = [
     "192.168.237.135"
@@ -368,8 +367,10 @@ try:
         # SUCCESS LOGINS
         
         elif (
-            "session opened for user" in line.lower()
-            or "accepted password" in line.lower()
+            ( 
+                "session opened for user" in line.lower()
+                or "accepted password" in line.lower()
+           )
            and "cron" not in line.lower()
            and "systemd" not in line.lower()
         ):
@@ -377,13 +378,7 @@ try:
             print(Fore.GREEN + "\n[SUCCESS LOGIN DETECTED]" + Style.RESET_ALL)
             print(Fore.GREEN + line + Style.RESET_ALL)
 
-            if "accepted password for root" in line.lower():
-                print(Fore.RED + "[CRITICAL] ROOT ACCESS GAINED!" + Style.RESET_ALL)
-
-                send_email_alert(
-                    "🚨 CRITICAL ROOT ACCESS ALERT",
-                    f"Root access detected!\n\nLog:\n{line}"
-                )
+            
     
 except KeyboardInterrupt:
 
