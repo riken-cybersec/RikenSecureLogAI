@@ -1,0 +1,4 @@
+blocked_ips.log
+security_report.json
+security_report.txt
+__pycache__/
