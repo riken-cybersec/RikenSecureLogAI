@@ -30,7 +30,7 @@ Installation
 
 Clone the repository:
 
-git clone https://github.com/YOUR_USERNAME/RikenSecureLogAI.git
+git clone https://github.com/riken-cybersec/RikenSecureLogAI.git
 
 cd RikenSecureLogAI
 
