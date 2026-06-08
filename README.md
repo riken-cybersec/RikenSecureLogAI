@@ -78,7 +78,7 @@ Future Improvements
 ![Auto IP Blocking](screenshots/03-auto-ip-blocking.png)
 
 ### Whitelist IP Feature
-![Whitelist IP Feature](screenshots/04-whitelist-ip-feature.png)
+![Whitelist IP Feature](screenshots/04-whitelist-ip-feature-.png)
 
 ### Dashboard Overview
 ![Dashboard Overview](screenshots/05-dashboard-overview.png)
