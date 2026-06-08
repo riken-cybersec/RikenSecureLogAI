@@ -9,9 +9,7 @@ EMAIL_SENDER = "your_email@gmail.com"
 EMAIL_PASSWORD = "YOUR_APP_PASSWORD"
 EMAIL_RECEIVER = "receiver_email@gmail.com"
 
-WHITELIST = [
-    "192.168.237.135"
-]
+WHITELIST = set() 
 
 source_counts = {}
 
@@ -309,7 +307,27 @@ try:
     for line in process.stdout:
 
         line = line.strip()
+
+        if "cron" in line.lower():
+            continue
+
+        security_keywords = [
+            "failed",
+        "failure",
+        "accepted",
+        "invalid user",
+        "sudo",
+        "su:",
+        "sshd",
+        "authentication",
+        "root"
+        ]
+
+        if not any(keyword in line.lower() for keyword in security_keywords):
+            continue
         print(line)
+
+        
 
         # FAILED LOGINS
 
