@@ -66,6 +66,23 @@ Future Improvements
 * Telegram Notifications
 * Advanced Threat Analytics
 
+## Screenshots
+
+### Tool Startup
+![Tool Startup](screenshots/01-tool-startup.png)
+
+### Failed Login Detection
+![Failed Login Detection](screenshots/02-failed-login-detection.png)
+
+### Auto IP Blocking
+![Auto IP Blocking](screenshots/03-auto-ip-blocking.png)
+
+### Whitelist IP Feature
+![Whitelist IP Feature](screenshots/04-whitelist-ip-feature.png)
+
+### Dashboard Overview
+![Dashboard Overview](screenshots/05-dashboard-overview.png)
+
 Author
 
 Riken Patel
